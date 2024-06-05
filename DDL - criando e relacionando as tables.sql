@@ -57,5 +57,16 @@ INSERT INTO dentistas(especialidade, cro, telefone, celular, nomeDentista) VALUE
 INSERT INTO dentistas(especialidade, cro, telefone, celular, nomeDentista) VALUES
 ('geral', '87654321', '1629588345', '1298737730', 'Mike Kutner');
 
-		 
+
+/*4 - Inserir 3 consultas, sendo 1 para o dentista que cuida de Ortodontia e 2 para o dentista cuja especialidade é Geral. O tipo de todas elas será Avaliação.*/
+
+/*inserir observações (esqueci)*/
+ALTER TABLE consultas ADD COLUMN observacao TEXT(500);
+
+INSERT INTO consultas(dataConsulta, horaConsulta, tipoConsulta, idDentista, idPaciente)
+VALUES ('2024-03-01','10:30:00','Avaliação' , 4, 1); 
+INSERT INTO consultas(dataConsulta, horaConsulta, tipoConsulta, idDentista, idPaciente)
+VALUES ('2024-03-02','04:30:00','Avaliação' , 4, 2); 
+INSERT INTO consultas(dataConsulta, horaConsulta, tipoConsulta, idDentista, idPaciente)
+VALUES ('2024-05-12','07:34:00','Avaliação' , 1, 4); 
 
