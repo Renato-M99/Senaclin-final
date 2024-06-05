@@ -74,4 +74,9 @@ VALUES ('2024-05-12','07:34:00','Avaliação' , 1, 4);
 
 UPDATE dentistas SET telefone = '1321562335', celular = '1220336736', especialidade = 'geral' WHERE idDentista = 3;
 
+/*6. Atualizar a data e hora de uma consulta marcada com um dentista cuja especialidade é Geral;*/
+
+UPDATE consultas SET dataConsulta = '2024-03-14', horaConsulta = '08:40:00' WHERE idPaciente = 2; 
+
+
 
