@@ -70,3 +70,8 @@ VALUES ('2024-03-02','04:30:00','Avaliação' , 4, 2);
 INSERT INTO consultas(dataConsulta, horaConsulta, tipoConsulta, idDentista, idPaciente)
 VALUES ('2024-05-12','07:34:00','Avaliação' , 1, 4); 
 
+/*5.	Atualizar todos os dados, exceto nome e cro, do dentista que cuida de implantodontia, mudando sua especialidade para Geral;*/
+
+UPDATE dentistas SET telefone = '1321562335', celular = '1220336736', especialidade = 'geral' WHERE idDentista = 3;
+
+
