@@ -95,5 +95,8 @@ SELECT dentistas.nomeDentista, consultas.dataConsulta, pacientes.nomePaciente, p
 INNER JOIN dentistas ON dentistas.idDentista = consultas.idDentista
 INNER JOIN pacientes ON pacientes.idPaciente = consultas.idPaciente WHERE consultas.idDentista > 0;
 
+/*10.	Selecionar o nome do dentista, a data da consulta e o tipo da consulta, MESMO quando os dentistas não possuam consultas; */
 
+SELECT dentistas.nomeDentista, consultas.dataConsulta, consultas.tipoConsulta FROM dentistas
+LEFT JOIN consultas ON consultas.idConsulta = dentistas.idDentista WHERE dentistas.idDentista > 0;
 
