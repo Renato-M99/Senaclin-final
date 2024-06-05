@@ -37,3 +37,13 @@ CONSTRAINT fk_consulta_paciente FOREIGN KEY (idPaciente) REFERENCES pacientes(id
 /*1 - Adicionar a coluna cidade na tabela pacientes*/
 ALTER TABLE pacientes ADD COLUMN cidade VARCHAR(20) NOT NULL;
 
+/*2 - Adicionar 6 pacientes, sendo 3 de Santos, 1 de Guarujá e 2 de São Vicente.*/
+INSERT INTO pacientes(nomePaciente, cpf, tipoLogradouro, nomeLogradouro, numero, complemento, telefone, cidade) 
+VALUES ('Jango Fett', '89417261827', 'rua', 'Carvalho de Mendonça', '712', '2', '1325395449', 'Santos'), 
+		 ('Padme Amidala', '01685465153', 'avenida', 'Conselheiro Nébias', '304', '12', '1325284879', 'Santos'),
+		 ('Anakin Skywalker', '47624927799', 'rua', 'Rio de Janeiro', '102', '8', '1335050651', 'Santos'),
+		 ('Sheev Palpatine', '86747319613', 'rua', 'Chile', '314', '21', '1326646877', 'Guarujá'),
+		 ('Jabba the Hutts', '97023871837', 'avenida', 'Presidente Wilson', '233', '1', '1334584118', 'São Vicente'),
+		 ('Rey Palpatine', '02159983918', 'avenida', 'Presidente Wilson', '233', '1', '1325436561', 'São Vicente');
+		 
+
