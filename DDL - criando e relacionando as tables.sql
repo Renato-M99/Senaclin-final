@@ -104,3 +104,8 @@ LEFT JOIN consultas ON consultas.idConsulta = dentistas.idDentista WHERE dentist
 Para isto, você utilizará o comando group by do sql. */
 
 SELECT dentistas.especialidade, COUNT(dentistas.nomeDentista) AS 'qtd Dentistas' FROM dentistas GROUP BY dentistas.especialidade ORDER BY dentistas.especialidade;
+
+/*12.	Criar uma query que mostre a quantidade de consultas que a clínica possui em determinado período do ano. Escolher um mês que retorne ao menos uma consulta,
+ e incluir o mês como filtro.*/
+ 
+SELECT COUNT(consultas.idConsulta) AS 'consultas março' FROM consultas WHERE consultas.dataConsulta >= '2024-03-01' AND consultas.dataConsulta < '2024-03-31';
