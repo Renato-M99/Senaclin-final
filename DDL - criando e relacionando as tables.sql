@@ -118,3 +118,29 @@ SELECT COUNT(consultas.tipoConsulta) AS 'Consultas', consultas.tipoConsulta FROM
 
 SELECT COUNT(pacientes.idPaciente) AS 'qtd pacientes' FROM pacientes;
 
+/*15.	Criar uma query que traga todas as consultas da especialidade implantodontia. 
+Deve vir na query o nome do dentista, o cro, a data da consulta e o nome do paciente, 
+ordenados da data mais atual para a mais antiga.*/
+
+/*mudando a especialidade do dentista para implantodontia*/
+UPDATE dentistas SET especialidade='implantodontia' WHERE dentistas.idDentista = 3;
+
+/*inserindo consultas para implantodontia*/
+
+INSERT INTO consultas(dataConsulta, horaConsulta, tipoConsulta, idDentista, idPaciente)
+VALUES ('2024-03-01','10:30:00','Avaliação' , 3, 5); 
+INSERT INTO consultas(dataConsulta, horaConsulta, tipoConsulta, idDentista, idPaciente)
+VALUES ('2024-03-02','04:30:00','Avaliação' , 3, 4); 
+INSERT INTO consultas(dataConsulta, horaConsulta, tipoConsulta, idDentista, idPaciente)
+VALUES ('2024-05-12','07:34:00','Avaliação' , 3, 3); 
+
+/*fazendo a query*/
+
+SELECT dentistas.nomeDentista, dentistas.cro, consultas.dataConsulta, pacientes.nomePaciente  FROM consultas 
+INNER JOIN dentistas ON consultas.idDentista = dentistas.idDentista 
+INNER JOIN pacientes ON pacientes.idPaciente = consultas.idPaciente
+WHERE dentistas.especialidade = 'implantodontia'
+ORDER BY consultas.dataConsulta DESC;
+
+
+
