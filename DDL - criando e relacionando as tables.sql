@@ -156,4 +156,12 @@ ORDER BY consultas.dataConsulta DESC;
 
 CALL ps_especialidade('implantodontia');
 
+/*17.	Crie uma view similar ao exercício 13. Execute a view para testar.*/
+
+CREATE VIEW vw_consultasAgrupadas AS 
+SELECT COUNT(consultas.tipoConsulta) AS 'Consultas', consultas.tipoConsulta FROM consultas GROUP BY consultas.tipoConsulta ORDER BY COUNT(consultas.idConsulta);
+
+SELECT * FROM vw_consultasagrupadas;
+
+
 
