@@ -100,3 +100,7 @@ INNER JOIN pacientes ON pacientes.idPaciente = consultas.idPaciente WHERE consul
 SELECT dentistas.nomeDentista, consultas.dataConsulta, consultas.tipoConsulta FROM dentistas
 LEFT JOIN consultas ON consultas.idConsulta = dentistas.idDentista WHERE dentistas.idDentista > 0;
 
+/*11.	Criar uma query que exiba a quantidade de dentistas que a clínica possui, agrupando-os por especialidade, ordenando pelo nome da especialidade de A-Z. 
+Para isto, você utilizará o comando group by do sql. */
+
+SELECT dentistas.especialidade, COUNT(dentistas.nomeDentista) AS 'qtd Dentistas' FROM dentistas GROUP BY dentistas.especialidade ORDER BY dentistas.especialidade;
