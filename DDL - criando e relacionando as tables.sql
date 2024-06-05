@@ -46,4 +46,16 @@ VALUES ('Jango Fett', '89417261827', 'rua', 'Carvalho de Mendonça', '712', '2',
 		 ('Jabba the Hutts', '97023871837', 'avenida', 'Presidente Wilson', '233', '1', '1334584118', 'São Vicente'),
 		 ('Rey Palpatine', '02159983918', 'avenida', 'Presidente Wilson', '233', '1', '1325436561', 'São Vicente');
 		 
+/*3.	Inserir 4 dentistas de forma explícita, sendo 1 de cada especialidade*/
+
+INSERT INTO dentistas(especialidade, cro, telefone, celular, nomeDentista) VALUES
+('ortodontia', '12345678', '1438671432', '1996883224', 'Chirs Taub');
+INSERT INTO dentistas(especialidade, cro, telefone, celular, nomeDentista) VALUES
+('periodontia', '23456780', '1135273071', '1137607653', 'Gregory House');
+INSERT INTO dentistas(especialidade, cro, telefone, celular, nomeDentista) VALUES
+('implantodontia', '08764521', '1834384025', '1823572516', 'Robert Chase');
+INSERT INTO dentistas(especialidade, cro, telefone, celular, nomeDentista) VALUES
+('geral', '87654321', '1629588345', '1298737730', 'Mike Kutner');
+
+		 
 
