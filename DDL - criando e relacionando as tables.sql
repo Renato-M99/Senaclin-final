@@ -109,3 +109,8 @@ SELECT dentistas.especialidade, COUNT(dentistas.nomeDentista) AS 'qtd Dentistas'
  e incluir o mês como filtro.*/
  
 SELECT COUNT(consultas.idConsulta) AS 'consultas março' FROM consultas WHERE consultas.dataConsulta >= '2024-03-01' AND consultas.dataConsulta < '2024-03-31';
+
+/*13.	Criar uma query que traga todos os tipos de consulta, agrupadas pela quantidade.*/
+
+SELECT COUNT(consultas.tipoConsulta) AS 'Consultas', consultas.tipoConsulta FROM consultas GROUP BY consultas.tipoConsulta ORDER BY COUNT(consultas.idConsulta);
+
