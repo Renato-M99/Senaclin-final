@@ -163,5 +163,14 @@ SELECT COUNT(consultas.tipoConsulta) AS 'Consultas', consultas.tipoConsulta FROM
 
 SELECT * FROM vw_consultasagrupadas;
 
+/*Desafio - Criar uma query que traga quantas consultas cada um dos dentistas realizou ao longo de todo o período, 
+ ordenando as do que atendeu mais pacientes para o que atendeu menos. */
+ 
+SELECT COUNT(consultas.idDentista) AS 'quantas consultas', dentistas.nomeDentista AS 'Dentista' FROM consultas 
+INNER JOIN pacientes ON pacientes.idPaciente = consultas.idPaciente
+INNER JOIN dentistas ON dentistas.idDentista = consultas.idDentista
+GROUP BY dentistas.nomeDentista ORDER BY COUNT(consultas.idDentista);
+
+
 
 
