@@ -33,3 +33,7 @@ idPaciente INT NOT NULL,
 CONSTRAINT fk_consulta_dentista FOREIGN KEY (idDentista) REFERENCES dentistas(idDentista),
 CONSTRAINT fk_consulta_paciente FOREIGN KEY (idPaciente) REFERENCES pacientes(idPaciente)
 );
+
+/*1 - Adicionar a coluna cidade na tabela pacientes*/
+ALTER TABLE pacientes ADD COLUMN cidade VARCHAR(20) NOT NULL;
+
