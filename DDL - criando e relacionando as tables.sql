@@ -78,5 +78,15 @@ UPDATE dentistas SET telefone = '1321562335', celular = '1220336736', especialid
 
 UPDATE consultas SET dataConsulta = '2024-03-14', horaConsulta = '08:40:00' WHERE idPaciente = 2; 
 
+/*7.	Atualizar a consulta do dentista de especialidade ortodontia, mudando o tipo de consulta para Tratamento e 
+inserindo uma observação do dentista com o seguinte texto: “Tratamento será realizado em 10 consultas. 
+Prioridade: Moderada. Remédio aplicado: Ponstan, caso sinta dores”*/
+
+UPDATE consultas SET observacao = 'Tratamento será realizado em 10 consultas. 
+Prioridade: Moderada. Remédio aplicado: Ponstan, caso sinta dores', consultas.tipoConsulta = 'tratamento' WHERE idDentista = 1;
+
+
+
+
 
 
