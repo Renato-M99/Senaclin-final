@@ -89,5 +89,11 @@ Prioridade: Moderada. Remédio aplicado: Ponstan, caso sinta dores', consultas.t
 
 SELECT pacientes.nomePaciente, pacientes.telefone FROM pacientes ORDER BY nomePaciente;
 
+/*9 - Selecionar o nome dos dentistas, a datas da consulta, o nome do paciente e seu telefone, APENAS dos dentistas que possuem consultas*/
+
+SELECT dentistas.nomeDentista, consultas.dataConsulta, pacientes.nomePaciente, pacientes.telefone FROM consultas
+INNER JOIN dentistas ON dentistas.idDentista = consultas.idDentista
+INNER JOIN pacientes ON pacientes.idPaciente = consultas.idPaciente WHERE consultas.idDentista > 0;
+
 
 
