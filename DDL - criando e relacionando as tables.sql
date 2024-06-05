@@ -114,3 +114,7 @@ SELECT COUNT(consultas.idConsulta) AS 'consultas março' FROM consultas WHERE co
 
 SELECT COUNT(consultas.tipoConsulta) AS 'Consultas', consultas.tipoConsulta FROM consultas GROUP BY consultas.tipoConsulta ORDER BY COUNT(consultas.idConsulta);
 
+/*14.	Criar uma query que traga o número de pacientes que a clínica possui.*/
+
+SELECT COUNT(pacientes.idPaciente) AS 'qtd pacientes' FROM pacientes;
+
