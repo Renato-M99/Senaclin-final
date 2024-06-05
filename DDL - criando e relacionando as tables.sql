@@ -85,8 +85,9 @@ Prioridade: Moderada. Remédio aplicado: Ponstan, caso sinta dores”*/
 UPDATE consultas SET observacao = 'Tratamento será realizado em 10 consultas. 
 Prioridade: Moderada. Remédio aplicado: Ponstan, caso sinta dores', consultas.tipoConsulta = 'tratamento' WHERE idDentista = 1;
 
+/*8.	Selecionar nome e telefone de todo os pacientes que residem em Santos, em ordem alfabética;*/
 
-
+SELECT pacientes.nomePaciente, pacientes.telefone FROM pacientes ORDER BY nomePaciente;
 
 
 
