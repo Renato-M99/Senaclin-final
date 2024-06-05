@@ -143,4 +143,17 @@ WHERE dentistas.especialidade = 'implantodontia'
 ORDER BY consultas.dataConsulta DESC;
 
 
+/*16.	Crie uma procedure similar ao exercício 15, porém a especialidade deve ser passada como parâmetro. Execute a procedure para testar.*/
+
+CREATE PROCEDURE ps_especialidade 
+(IN esp VARCHAR(30))
+SELECT dentistas.nomeDentista, dentistas.cro, consultas.dataConsulta, pacientes.nomePaciente  FROM consultas 
+INNER JOIN dentistas ON consultas.idDentista = dentistas.idDentista 
+INNER JOIN pacientes ON pacientes.idPaciente = consultas.idPaciente
+WHERE dentistas.especialidade = esp
+ORDER BY consultas.dataConsulta DESC;
+
+
+CALL ps_especialidade('implantodontia');
+
 
