@@ -16,11 +16,12 @@ telefone VARCHAR(11) NOT NULL
 CREATE TABLE dentistas(
 idDentista INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 cro VARCHAR(8) NOT NULL UNIQUE, 
+nomeDentista VARCHAR(30) NOT NULL,
 especialidade VARCHAR(30) NOT NULL DEFAULT 'geral', 
 telefone VARCHAR(11) NOT NULL,
 celular VARCHAR(11) NOT NULL,
 CONSTRAINT ch_especialidades CHECK (especialidade='ortodontia' OR especialidade='periodontia' 
-OR especialidade='implantodontia')
+OR especialidade='implantodontia' OR especialidade='geral')
 );
 
 CREATE TABLE consultas(
